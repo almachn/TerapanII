@@ -1,5 +1,7 @@
 # **Sistem Rekomendasi Buku**
 
+## Project Overview
+
 Dalam era digital yang dipenuhi dengan limpahan informasi dan pilihan, menemukan konten yang relevan menajdi salah satu tantangan tersendiri bagi pengguna. Hal ini juga terjadi dalam dunia literasi digital, di mana banyak tersedianya jutaan judul buku namun tidak semua sesuai dengan minat atau kebutuhan pembaca. Pengguna kerap kali kesulitan menentukan buku mana yang layak dibaca selanjutnya tanpa harus menelusuri ribuan opsi secara manual [1].
 
 Dalam lingkungan akademik, sistem rekomendasi buku memiliki potensi besar untuk mendukung kegiatan belajar sekaligus menumbuhkan minat baca siswa. Tak jarang siswa mengalami kebingungan saat memilih bacaan, terutama ketika mereka belum mengetahui selera pribadi atau belum mendapatkan saran dari orang lain. Kehadiran sistem yang mampu memberikan rekomendasi buku secara otomatis dan terpersonalisasi diharapkan dapat mempermudah proses pemilihan bacaan, serta mengarahkannya sesuai minat atau kebutuhan masing-masing. Di sisi lain, sistem ini juga bermanfaat bagi pustakawan atau pengelola perpustakaan dalam mengidentifikasi tren bacaan yang populer, sehingga pengelolaan koleksi buku dapat dilakukan dengan lebih tepat sasaran [2].
