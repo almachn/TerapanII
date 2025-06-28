@@ -109,12 +109,11 @@ Sebagian besar nilai kosong berasal dari kolom `Age` pada dataset pengguna, yang
 
 #### **Data Duplikat**
 
-Tidak ditemukan baris duplikat pada dataset utama setelah pengecekan, namun proses `drop_duplicates()` tetap dijalankan untuk memastikan integritas data.
-
+Tidak ditemukan baris duplikat pada dataset utama setelah pengecekan, namun proses `drop_duplicates()` tetap dijalankan untuk memastikan model berjalan baik saat menggunakan data ini.
 
 ### **Distribusi & Interaksi Awal**
 
-* Sebagian besar pengguna hanya memberikan satu atau dua rating, tetapi ada juga pengguna yang sangat aktif (top user memberikan hingga 13.602 rating).
+* Sebagian besar pengguna hanya memberikan satu atau dua rating, tetapi beberapa pengguna terlihat sangat aktif (top user memberikan hingga 13.602 rating).
 * Beberapa buku populer memiliki ratusan hingga ribuan rating, seperti *Wild Animus* dan *Angels & Demons*.
 
 ### **Filtering Data untuk Pemodelan**
@@ -192,7 +191,7 @@ Mayoritas pengguna memberikan rating tinggi (7–10), menunjukkan adanya bias po
 
 ### Aktivitas Pengguna
 
-![Aktivitas Pengguna](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/pengguna-aktif.jpg)
+![Aktivitas Pengguna](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/pengguna-aktif.png)
 
 Sebagian besar pengguna memberikan rating dalam jumlah terbatas. Oleh karena itu, dilakukan filtering hanya terhadap pengguna yang memberi minimal 10 rating, untuk menjaga kualitas rekomendasi.
 
@@ -200,7 +199,7 @@ Sebagian besar pengguna memberikan rating dalam jumlah terbatas. Oleh karena itu
 
 ![Popularitas Buku](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/rate-buku.png)
 
-Beberapa buku populer menerima ribuan rating, sedangkan mayoritas buku hanya mendapat sedikit interaksi. Hal ini mencerminkan distribusi yang tidak merata dan menjadi tantangan tersendiri dalam sistem rekomendasi (cold start).
+Beberapa buku populer menerima ribuan rating, sedangkan mayoritas buku hanya mendapat sedikit interaksi. Hal ini mencerminkan distribusi yang tidak merata dan menjadi tantangan tersendiri dalam sistem rekomendasi.
 
 ## Data Preparation
 
@@ -251,11 +250,6 @@ Persiapan data merupakan tahap penting sebelum melakukan pemodelan sistem rekome
   * Fitur gabungan `Book-Title` + `Book-Author` diolah menggunakan `TF-IDF Vectorizer`.
   * Nilai kesamaan antar buku dihitung menggunakan **cosine similarity**, yang menjadi dasar pemberian rekomendasi berdasarkan konten.
  
-## Modeling
-Berhubung proyek kita fokus ke **sistem rekomendasi buku**, modeling-nya akan mengembangkan tiga pendekatan: **Collaborative Filtering**, **Content-Based Filtering**, dan **Hybrid Recommendation**. Yuk kita susun bagian *Modeling* dengan gaya dan struktur serupa kayak contoh Spotify-mu tadi. Ini dia:
-
----
-
 ## Modeling
 Setelah tahap data preparation selesai, proses dilanjutkan ke pembuatan dan pelatihan model sistem rekomendasi. Tujuan utama pada tahap ini adalah membandingkan performa tiga pendekatan berbeda dalam memberikan rekomendasi buku yang akurat dan personal:
 
@@ -357,8 +351,8 @@ def hybrid_recommendation(..., alpha=0.5):
 
 | Model                         | RMSE       | MAE        | Precision\@5 |
 | ----------------------------- | ---------- | ---------- | ------------ |
-| Collaborative Filtering (SVD) | **1.6120** | **1.2438** | **0.2987**   |
-| Content-Based Filtering       | -          | -          | 0.0265       |
+| Collaborative Filtering (SVD) | **1.6122** | **1.2445** | **0.2992**   |
+| Content-Based Filtering       | -          | -          | 0.0273      |
 | Hybrid                        | -          | -          | 0.0400       |
 
 Dari evaluasi awal, model **SVD (Collaborative Filtering)** menunjukkan performa terbaik dalam hal akurasi prediksi rating dan precision rekomendasi. Namun, pendekatan hybrid menjanjikan fleksibilitas yang lebih baik dan bisa dikembangkan lebih lanjut dengan tuning parameter dan integrasi fitur tambahan (genre, sinopsis, dsb).
@@ -408,9 +402,9 @@ Dalam proyek sistem rekomendasi ini, evaluasi performa dilakukan menggunakan dua
 
 | Metrik       | Nilai  |
 | ------------ | ------ |
-| RMSE         | 1.6120 |
-| MAE          | 1.2438 |
-| Precision\@5 | 0.2987 |
+| RMSE         | 1.6122 |
+| MAE          | 1.2445 |
+| Precision\@5 | 0.2992 |
 
 Model CF berbasis SVD menunjukkan performa prediksi yang baik dengan error relatif rendah. Precision\@5 mendekati 30%, artinya dari setiap 5 buku yang direkomendasikan, 1–2 di antaranya cenderung sesuai dengan preferensi user.
 
@@ -418,9 +412,9 @@ Model CF berbasis SVD menunjukkan performa prediksi yang baik dengan error relat
 
 | Metrik       | Nilai  |
 | ------------ | ------ |
-| Precision\@5 | 0.2992 |
+| Precision\@5 | 0.0273 |
 
-Model CBF menghasilkan precision yang cukup rendah (\~2.9%), yang menunjukkan bahwa pendekatan berbasis konten (judul + penulis saja) belum cukup untuk memberikan rekomendasi yang benar-benar relevan bagi pengguna.
+Model CBF menghasilkan precision yang cukup rendah (\~2.7%), yang menunjukkan bahwa pendekatan berbasis konten (judul + penulis saja) belum cukup untuk memberikan rekomendasi yang benar-benar relevan bagi pengguna.
 
 Hal ini bisa disebabkan karena fitur konten yang digunakan terlalu terbatas.
 
