@@ -186,19 +186,19 @@ Sebelum membangun sistem rekomendasi, dilakukan eksplorasi terhadap tiga dataset
 
 ### Distribusi Rating
 
-![Distribusi Rating](https://raw.githubusercontent.com/almachn/TERAPAN-1/main/assets/distribusi-rates.png)
+![Distribusi Rating](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/distribusi-rates.png)
 
 Mayoritas pengguna memberikan rating tinggi (7–10), menunjukkan adanya bias positif dalam sistem rating. Nilai rating 0 dihapus karena diasumsikan sebagai implicit feedback.
 
 ### Aktivitas Pengguna
 
-![Aktivitas Pengguna](https://raw.githubusercontent.com/almachn/TERAPAN-1/main/assets/pengguna-aktif.jpg)
+![Aktivitas Pengguna](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/pengguna-aktif.jpg)
 
 Sebagian besar pengguna memberikan rating dalam jumlah terbatas. Oleh karena itu, dilakukan filtering hanya terhadap pengguna yang memberi minimal 10 rating, untuk menjaga kualitas rekomendasi.
 
 ### Popularitas Buku
 
-![Popularitas Buku](https://raw.githubusercontent.com/almachn/TERAPAN-1/main/assets/rate-buku.png)
+![Popularitas Buku](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/rate-buku.png)
 
 Beberapa buku populer menerima ribuan rating, sedangkan mayoritas buku hanya mendapat sedikit interaksi. Hal ini mencerminkan distribusi yang tidak merata dan menjadi tantangan tersendiri dalam sistem rekomendasi (cold start).
 
@@ -388,13 +388,13 @@ Dalam proyek sistem rekomendasi ini, evaluasi performa dilakukan menggunakan dua
 > Mengukur rata-rata deviasi kuadrat dari prediksi terhadap nilai aktual.
 > Semakin kecil nilai RMSE, semakin akurat model.
 
-![Root Mean Squared Error](https://raw.githubusercontent.com/almachn/TERAPAN-1/main/assets/RMSE.png)
+![Root Mean Squared Error](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/RMSE.png)
 
 #### MAE (Mean Absolute Error)
 
 > Rata-rata dari selisih absolut antara prediksi dan nilai sebenarnya.
 
-![Mean Absolute Error](https://raw.githubusercontent.com/almachn/TERAPAN-1/main/assets/MAE.png)
+![Mean Absolute Error](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/MAE.png)
 
 #### Precision\@K
 
@@ -404,7 +404,7 @@ Dalam proyek sistem rekomendasi ini, evaluasi performa dilakukan menggunakan dua
 
 1. **Collaborative Filtering (SVD)**
 
-![Evaluasi Collaborative Filtering](https://raw.githubusercontent.com/almachn/TERAPAN-1/main/assets/RMSE-MAE.png)
+![Evaluasi Collaborative Filtering](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/RMSE-MAE.png)
 
 | Metrik       | Nilai  |
 | ------------ | ------ |
