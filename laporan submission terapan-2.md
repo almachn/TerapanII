@@ -463,4 +463,9 @@ Beberapa potensi pengembangan lebih lanjut antara lain:
 * **Model evaluasi lebih luas**: Precision\@K bisa dibandingkan dengan Recall\@K atau NDCG untuk mendapatkan insight yang lebih lengkap.
 * **Model deep learning atau graph-based**: bisa ditambahkan untuk menangani cold-start dan meningkatkan akurasi prediksi dalam dataset besar.
 
+## Reference 
+
+[1] : Pratama, S. A. (n.d.). Pengembangan Sistem Rekomendasi Buku Menggunakan Collaborative Filtering Development Of A Book Recommendation System Using Collaborative Filtering. 2(2), 81–86. Availible: [https://doi.org/10.70963/jk.v2i2.112](https://doi.org/10.70963/jk.v2i2.112).
+[2] : Saputra, V. S., Ridwan, A., Pratama, T. G., Kudus, K., & Tengah, J. (2025). RANCANG BANGUN SISTEM REKOMENDASI BUKU BERBASIS ITEM-BASED COLLABORATIVE FILTERING MENGGUNAKAN ALGORITMA K-NEAREST. 13(1), 1540–1545. Availible: [https://doi.org/10.23960/jitet.v13i1.5995](https://doi.org/10.23960/jitet.v13i1.5995)
+
 
