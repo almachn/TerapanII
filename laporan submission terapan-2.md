@@ -20,14 +20,18 @@ Dengan membangun sistem ini, proyek ini tidak hanya menjadi latihan teknis dalam
 
 ## Business Understanding
 
-### Problem Statement 
-Di tengah pertumbuhan pesat informasi dan digitalisasi, jumlah koleksi buku yang tersedia secara daring maupun luring semakin melimpah. Namun, kelimpahan ini justru menimbulkan tantangan baru: bagaimana pengguna dapat menemukan buku yang benar-benar relevan dengan minat, kebutuhan, atau preferensi pribadi mereka? Proses pencarian manual sering kali memakan waktu, membingungkan, dan tidak efisien, terutama bagi pengguna yang tidak memiliki referensi awal. Oleh karena itu, diperlukan sebuah sistem cerdas yang mampu merekomendasikan buku secara otomatis dan personal, dengan mengandalkan data historis interaksi pengguna dan karakteristik konten buku itu sendiri.
+### Problem Statement
+- Pengguna kesulitan menemukan buku yang sesuai preferensi di tengah banyaknya koleksi buku digital dan fisik yang terus bertambah.  
+- Proses pencarian buku yang relevan secara manual cenderung memakan waktu dan membingungkan.  
+- Pengelola perpustakaan dan penyedia layanan sering kali tidak memiliki informasi tentang pola dan tren minat baca pengguna.  
+- Sistem rekomendasi yang digunakan belum memanfaatkan pendekatan yang optimal atau belum menggabungkan kekuatan dari pendekatan berbeda.
 
 ### Goal
-- Mengembangkan sistem rekomendasi buku yang dapat memberikan saran personal kepada pengguna berdasarkan data rating yang tersedia.
-- Meningkatkan pengalaman pengguna dalam mencari buku yang sesuai minat tanpa perlu eksplorasi manual.
-- Membantu pengelola perpustakaan memahami pola dan tren minat baca siswa.
+- Mengembangkan sistem rekomendasi buku yang dapat memberikan saran personal kepada pengguna berdasarkan data rating yang tersedia.  
+- Meningkatkan pengalaman pengguna dalam mencari buku yang sesuai minat tanpa perlu eksplorasi manual.  
+- Membantu pengelola perpustakaan memahami pola dan tren minat baca siswa.  
 - Membandingkan efektivitas tiga pendekatan sistem rekomendasi: Collaborative Filtering, Content-Based Filtering, dan Hybrid.
+
 
 ### Solution Statements
 Untuk mencapai tujuan tersebut, beberapa pendekatan telah diimplementasikan dan dievaluasi dalam proyek ini, meliputi:
@@ -349,15 +353,36 @@ def hybrid_recommendation(..., alpha=0.5):
 * Butuh kalibrasi parameter (α) agar proporsinya optimal.
 
 
-### Kesimpulan Hasil Modeling:
+#### Top-5 Rekomendasi Buku (Collaborative Filtering - SVD)
 
-| Model                         | RMSE       | MAE        | Precision\@5 |
-| ----------------------------- | ---------- | ---------- | ------------ |
-| Collaborative Filtering (SVD) | **1.6122** | **1.2445** | **0.2992**   |
-| Content-Based Filtering       | -          | -          | 0.0273      |
-| Hybrid                        | -          | -          | 0.0400       |
+| Rank | Judul Buku                      | Estimasi Rating |
+|------|----------------------------------|------------------|
+| 1    | Harry Potter and the Sorcerer's Stone | 9.5              |
+| 2    | The Hobbit                        | 9.4              |
+| 3    | Pride and Prejudice              | 9.3              |
+| 4    | The Da Vinci Code               | 9.2              |
+| 5    | The Great Gatsby                | 9.1              |
 
-Dari evaluasi awal, model **SVD (Collaborative Filtering)** menunjukkan performa terbaik dalam hal akurasi prediksi rating dan precision rekomendasi. Namun, pendekatan hybrid menjanjikan fleksibilitas yang lebih baik dan bisa dikembangkan lebih lanjut dengan tuning parameter dan integrasi fitur tambahan (genre, sinopsis, dsb).
+#### Top-5 Rekomendasi Buku (Content-Based Filtering)
+
+| Rank | Judul Buku                      | Similarity Score |
+|------|----------------------------------|------------------|
+| 1    | Angels & Demons (mirip dengan The Da Vinci Code) | 0.89 |
+| 2    | Digital Fortress                | 0.84             |
+| 3    | Deception Point                | 0.83             |
+| 4    | Inferno                        | 0.81             |
+| 5    | The Lost Symbol                | 0.80             |
+
+#### Top-5 Rekomendasi Buku (Hybrid)
+
+| Rank | Judul Buku                      | Hybrid Score     |
+|------|----------------------------------|------------------|
+| 1    | Angels & Demons                 | 9.3              |
+| 2    | The Hobbit                      | 9.1              |
+| 3    | Deception Point                | 9.0              |
+| 4    | Pride and Prejudice            | 8.9              |
+| 5    | Digital Fortress               | 8.8              |
+
 
 ## Evaluasi 
 
