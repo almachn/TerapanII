@@ -1,0 +1,15 @@
+** Sistem Rekomendasi Buku**
+
+Dalam era digital yang dipenuhi dengan limpahan informasi dan pilihan, menemukan konten yang relevan menajdi salah satu tantangan tersendiri bagi pengguna. Hal ini juga terjadi dalam dunia literasi digital, di mana banyak tersedianya jutaan judul buku namun tidak semua sesuai dengan minat atau kebutuhan pembaca. Pengguna kerap kali kesulitan menentukan buku mana yang layak dibaca selanjutnya tanpa harus menelusuri ribuan opsi secara manual.
+
+Salah satu solusi cerdas untuk permasalahan ini adalah pengembangan sistem rekomendasi. Sistem ini bertujuan menyaring dan menyajikan pilihan-pilihan yang paling relevan bagi pengguna berdasarkan preferensi mereka maupun karakteristik dari buku itu sendiri. Tidak hanya mempermudah pengalaman pengguna, tetapi juga dapat meningkatkan interaksi, keterlibatan, dan kepuasan pengguna dalam platform literasi.
+
+Dalam konteks proyek ini, sistem rekomendasi dikembangkan menggunakan dua pendekatan utama:
+
+**1. Collaborative Filtering,** yang menganalisis pola interaksi pengguna (misalnya rating yang diberikan), dan
+
+**2. Content-Based Filtering,** yang fokus pada informasi konten dari buku (judul, penulis).
+
+Kedua pendekatan ini kemudian digabungkan dalam skema **Hybrid Recommendation** untuk memperoleh hasil yang lebih akurat dan adaptif. Dataset yang digunakan merupakan data nyata dari Book-Crossing, yang berisi informasi mengenai buku, pengguna, dan penilaian yang mereka berikan.
+
+Dengan membangun sistem ini, proyek ini tidak hanya menjadi latihan teknis dalam penerapan machine learning, tetapi juga menghadirkan solusi nyata terhadap tantangan kurasi konten di era informasi yang berlimpah. Selain itu, sistem ini dapat dikembangkan lebih lanjut untuk berbagai jenis media seperti film, musik, produk e-commerce, dan lainnya.
