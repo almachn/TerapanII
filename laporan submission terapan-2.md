@@ -352,36 +352,37 @@ def hybrid_recommendation(..., alpha=0.5):
 * Lebih kompleks dari segi implementasi dan evaluasi.
 * Butuh kalibrasi parameter (α) agar proporsinya optimal.
 
+#### Hasil Rekomendasi
 
 #### Top-5 Rekomendasi Buku (Collaborative Filtering - SVD)
 
 | Rank | Judul Buku                      | Estimasi Rating |
 |------|----------------------------------|------------------|
-| 1    | Harry Potter and the Sorcerer's Stone | 9.5              |
-| 2    | The Hobbit                        | 9.4              |
-| 3    | Pride and Prejudice              | 9.3              |
-| 4    | The Da Vinci Code               | 9.2              |
-| 5    | The Great Gatsby                | 9.1              |
+| 1    | Free                             | 7.39              |
+| 2    | Marching Through Culpeper : A    | 6.08              |
+| 3    | Love You Forever                 | 6.05              |
+| 4    | Falling Up                       | 5.98              |
+| 5    | The Secret Life of Bees          | 5.89              |
 
 #### Top-5 Rekomendasi Buku (Content-Based Filtering)
 
-| Rank | Judul Buku                      | Similarity Score |
-|------|----------------------------------|------------------|
-| 1    | Angels & Demons (mirip dengan The Da Vinci Code) | 0.89 |
-| 2    | Digital Fortress                | 0.84             |
-| 3    | Deception Point                | 0.83             |
-| 4    | Inferno                        | 0.81             |
-| 5    | The Lost Symbol                | 0.80             |
+| Rank | Judul Buku                                   | Similarity Score |
+|------|----------------------------------------------|------------------|
+| 1    | El Codigo Da Vinci / The Da Vinci Code       | 0.91             |
+| 2    | The Da Vinci Code (Random House Large Print) | 0.74             |
+| 3    | Secrets of the Code: The Unauthorized...     | 0.71             |
+| 4    | The Da Vinci Hoax: Exposing                  | 0.68             |
+| 5    | Illuminati                                   | 0.63             |
 
 #### Top-5 Rekomendasi Buku (Hybrid)
 
-| Rank | Judul Buku                      | Hybrid Score     |
-|------|----------------------------------|------------------|
-| 1    | Angels & Demons                 | 9.3              |
-| 2    | The Hobbit                      | 9.1              |
-| 3    | Deception Point                | 9.0              |
-| 4    | Pride and Prejudice            | 8.9              |
-| 5    | Digital Fortress               | 8.8              |
+| Rank | Judul Buku                       | Hybrid Score      |
+|------|----------------------------------|-------------------|
+| 1    | Towing Jehovah (Harvest Book)    | 2.54              |
+| 2    | Roots                            | 2.36              |
+| 3    | The Traveling Vampire Show       | 2.29              |
+| 4    | Portraits (Contemporary Artist   | 2.25              |
+| 5    | Built to Last: Successful Habi	  | 2.24              |
 
 
 ## Evaluasi 
@@ -425,13 +426,13 @@ Dalam proyek sistem rekomendasi ini, evaluasi performa dilakukan menggunakan dua
 
 1. **Collaborative Filtering (SVD)**
 
-![Evaluasi Collaborative Filtering](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/RMSE-MAE.png)
+![Evaluasi Collaborative Filtering](https://raw.githubusercontent.com/almachn/TerapanII/main/assets/RMSE-MAE2.png)
 
 | Metrik       | Nilai  |
 | ------------ | ------ |
-| RMSE         | 1.6122 |
-| MAE          | 1.2445 |
-| Precision\@5 | 0.2992 |
+| RMSE         | 1.6120 |
+| MAE          | 1.2442 |
+| Precision\@5 | 0.2993 |
 
 Model CF berbasis SVD menunjukkan performa prediksi yang baik dengan error relatif rendah. Precision\@5 mendekati 30%, artinya dari setiap 5 buku yang direkomendasikan, 1–2 di antaranya cenderung sesuai dengan preferensi user.
 
@@ -439,9 +440,9 @@ Model CF berbasis SVD menunjukkan performa prediksi yang baik dengan error relat
 
 | Metrik       | Nilai  |
 | ------------ | ------ |
-| Precision\@5 | 0.0273 |
+| Precision\@5 | 0.0261 |
 
-Model CBF menghasilkan precision yang cukup rendah (\~2.7%), yang menunjukkan bahwa pendekatan berbasis konten (judul + penulis saja) belum cukup untuk memberikan rekomendasi yang benar-benar relevan bagi pengguna.
+Model CBF menghasilkan precision yang cukup rendah (\~2.6%), yang menunjukkan bahwa pendekatan berbasis konten (judul + penulis saja) belum cukup untuk memberikan rekomendasi yang benar-benar relevan bagi pengguna.
 
 Hal ini bisa disebabkan karena fitur konten yang digunakan terlalu terbatas.
 
