@@ -352,7 +352,7 @@ def hybrid_recommendation(..., alpha=0.5):
 * Lebih kompleks dari segi implementasi dan evaluasi.
 * Butuh kalibrasi parameter (α) agar proporsinya optimal.
 
-#### Hasil Rekomendasi
+### Hasil Rekomendasi
 
 #### Top-5 Rekomendasi Buku (Collaborative Filtering - SVD)
 
