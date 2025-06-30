@@ -356,13 +356,13 @@ def hybrid_recommendation(..., alpha=0.5):
 
 #### Top-5 Rekomendasi Buku (Collaborative Filtering - SVD)
 
-| Rank | Judul Buku                      | Estimasi Rating |
-|------|----------------------------------|------------------|
-| 1    | Free                             | 7.39              |
-| 2    | Marching Through Culpeper : A    | 6.08              |
-| 3    | Love You Forever                 | 6.05              |
-| 4    | Falling Up                       | 5.98              |
-| 5    | The Secret Life of Bees          | 5.89              |
+| Rank | Judul Buku                                    | Estimasi Rating |
+|------|-----------------------------------------------|-----------------|
+| 1    | Free                                          | 7.39            |
+| 2    | Marching Through Culpeper : A                 | 6.08            |
+| 3    | Love You Forever                              | 6.05            |
+| 4    | Falling Up                                    | 5.98            |
+| 5    | The Secret Life of Bees                       | 5.89            |
 
 #### Top-5 Rekomendasi Buku (Content-Based Filtering)
 
@@ -376,13 +376,13 @@ def hybrid_recommendation(..., alpha=0.5):
 
 #### Top-5 Rekomendasi Buku (Hybrid)
 
-| Rank | Judul Buku                       | Hybrid Score      |
-|------|----------------------------------|-------------------|
-| 1    | Towing Jehovah (Harvest Book)    | 2.54              |
-| 2    | Roots                            | 2.36              |
-| 3    | The Traveling Vampire Show       | 2.29              |
-| 4    | Portraits (Contemporary Artist   | 2.25              |
-| 5    | Built to Last: Successful Habi	  | 2.24              |
+| Rank | Judul Buku                                   | Hybrid Score     |
+|------|----------------------------------------------|------------------|
+| 1    | Towing Jehovah (Harvest Book)                | 2.54             |
+| 2    | Roots                                        | 2.36             |
+| 3    | The Traveling Vampire Show                   | 2.29             |
+| 4    | Portraits (Contemporary Artist               | 2.25             |
+| 5    | Built to Last: Successful Habi	              | 2.24             |
 
 
 ## Evaluasi 
